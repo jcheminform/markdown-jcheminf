@@ -8,11 +8,12 @@ with the CiTO ontology.
 
 To use this template, you need a [pandoc](https://github.com/jgm/pandoc/releases) installation
 (version 2.12 or higher). A `Makefile` is provided to convert
-the `article.md` template into a Word `.docx` or a PDF file:
+the `article.md` template into a Word `.docx` (default), `.html`, and a PDF file:
 
 ```shell
 make article.docx
 make article.pdf
+make article.html
 ```
 
 Alternatively, RStudio (latst version) can be used with the `article.Rmd` file.
@@ -23,8 +24,7 @@ The following article types have a template
 
 * [Release article](templates/research.md)
 
-For RStudio, copy the template into the same folder as this README as `article.Rmd`.
-When using the [Makefile](Makefile), save it as `article.md`.
+Copy the template into the same folder as this README as `article.Rmd`.
 
 ## Writing the article
 

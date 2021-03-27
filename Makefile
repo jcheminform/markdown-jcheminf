@@ -3,7 +3,7 @@ all: article.docx
 clean:
 	@rm -f article.docx article.pdf article.html *.orig .Rhistory
 
-article.pdf: article.md bibliography.bib \
+article.pdf: article.Rmd bibliography.bib \
 		filters/insert-cito-in-ref.lua \
 		filters/extract-cito.lua
 	# docker run --rm -t -v "${PWD}":/data -u $(id -u):$(id -g) pandoc/core:2.12 \
@@ -17,7 +17,7 @@ article.pdf: article.md bibliography.bib \
 	    --output=$@ \
 	    $<
 
-article.docx: article.md bibliography.bib \
+article.docx: article.Rmd bibliography.bib \
 		filters/insert-cito-in-ref.lua \
 		filters/extract-cito.lua
 	# docker run --rm -t -v "${PWD}":/data -u $(id -u):$(id -g) pandoc/core:2.12 \
@@ -31,7 +31,7 @@ article.docx: article.md bibliography.bib \
 	    --output=$@ \
 	    $<
 
-article.html: article.md bibliography.bib \
+article.html: article.Rmd bibliography.bib \
                 filters/insert-cito-in-ref.lua \
                 filters/extract-cito.lua
 	# docker run --rm -t -v "${PWD}":/data -u $(id -u):$(id -g) pandoc/core:2.12 \
