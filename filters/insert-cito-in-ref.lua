@@ -15,7 +15,17 @@ local function cito_properties(cite_id)
   local props = citation_properties[cite_id]
   if not props then return {} end
 
-  return List(props):map(
+  -- remove duplicates
+  local deduplicated_props = List()
+  local seen = {}
+  for _, prop in ipairs(props) do
+    if not seen[prop] then
+      deduplicated_props:insert(prop)
+      seen[prop] = true
+    end
+  end
+
+  return List(deduplicated_props):map(
     function (x)
       return pandoc.Strong{
         pandoc.Space(),
