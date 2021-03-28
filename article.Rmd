@@ -84,7 +84,7 @@ If you have more than one reference to cite, separate them with a semicolon,
 for example: *[\@uses_method_in:Willighagen_2020; \@extends:Willighagen_2020]*
 [@uses_method_in:Willighagen_2020; @extends:Willighagen_2020].
 
-### Support intentions
+### Supported intentions
 
 A full list of supported intentions can be found in the `filters/extract-cito.lua`
 file in the repository and [here online](https://github.com/jcheminform/markdown-jcheminf/blob/master/filters/extract-cito.lua).
