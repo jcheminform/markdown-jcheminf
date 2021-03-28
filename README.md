@@ -22,7 +22,8 @@ Alternatively, RStudio (latst version) can be used with the `article.Rmd` file.
 
 The following article types have a template
 
-* [Release article](templates/research.md)
+* [Release article](templates/research_article.Rmd)
+* [Software](templates/software.Rmd)
 
 Copy the template into the same folder as this README as `article.Rmd`.
 
