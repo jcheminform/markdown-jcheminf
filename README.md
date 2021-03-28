@@ -34,6 +34,10 @@ Markdown syntax. The template can be used as regular Markdown file, and in RStud
 and it contains in the YAML header instructions which options to
 select for either.
 
+A lot of documentation can be found in this [Pandoc Markdown](https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html)
+website.
+
+
 ### CiTO support
 
 The template supports CiTO annotation and the template contains

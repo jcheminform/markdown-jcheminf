@@ -66,28 +66,48 @@ in the paper must be provided as supplemental materials, or be otherwise accessi
 without the need for registration, login or agreement with license terms other than
 Creative Commons licenses for data and text and OSI-approved Open Source Licenses
 for software. For any software, the source code must be provided
-@agrees_with:Guha_Willighagen_2017.
+[@agrees_with:Guha_Willighagen_2017].
 
 ## Adding References
 
 References are added to the content in a similar way as LaTeX and there is a
 `bibliography.bib` in this folder in the BibTeX format. A citation is made
-by including an *\@* followed by the BibTeX key, for example like
-*\@Upper_writers_1974* for Ref. @Upper_writers_1974.
+by including an *\@* followed by the BibTeX key in square brackets, for example like
+*[\@Upper_writers_1974]* for Ref. [@Upper_writers_1974].
 
 Now, the *Journal of Cheminformatics* support citation typing ontology annotations
 using the CiTO @uses_method_in:Willighagen_2020. Adding an annoted citation
 is done by prepending the BibTeX key with the intention, e.g.
-`\@agrees_with:Guha_Willighagen_2017` or `\@uses_method_in:Willighagen_2020`.
+*[\@agrees_with:Guha_Willighagen_2017]* or *[\@uses_method_in:Willighagen_2020]*.
 
+If you have more than one reference to cite, separate them with a semicolon,
+for example: *[\@uses_method_in:Willighagen_2020; \@extends:Willighagen_2020]*
+[@uses_method_in:Willighagen_2020; @extends:Willighagen_2020].
+
+### Support intentions
+
+A full list of supported intentions can be found in the `filters/extract-cito.lua`
+file in the repository and [here online](https://github.com/jcheminform/markdown-jcheminf/blob/master/filters/extract-cito.lua).
+The journal allows all CiTO intention types to be used, and currently
+encourages the following:
+
+
+* cito:citesAsDataSource
+* cito:usesDataFrom
+* cito:usesMethodIn
+* cito:citesAsAuthority
+* cito:discusses
+* cito:extends
+* cito:agreesWith
+* cito:disagreesWith
+
+![](images/cito_in_Word.png)
+**Figure 1**: Reference list as converted into Word, including CiTO annotation.
 
 # Results
 
 Figures are easy to add in Markdown, and can be done with the `![](images/cito_in_Word.png)`
 syntax.
-
-![](images/cito_in_Word.png)
-**Figure 1**: Reference list as converted into Word, including CiTO annotation.
 
 # Discussion
 
