@@ -81,8 +81,11 @@ is done by prepending the BibTeX key with the intention, e.g.
 *[\@agrees_with:Guha_Willighagen_2017]* or *[\@uses_method_in:Willighagen_2020]*.
 
 If you have more than one reference to cite, separate them with a semicolon,
-for example: *[\@uses_method_in:Willighagen_2020; \@extends:Willighagen_2020]*
-[@uses_method_in:Willighagen_2020; @extends:Willighagen_2020].
+for example: *[\@Willighagen_2020; \@Guha_Willighagen_2017]*
+[@Willighagen_2020; @Guha_Willighagen_2017].
+If you have more than one intention to cite, separate them with a colon,
+for example: *[\@uses_method_in:extends:Willighagen_2020]*
+[@uses_method_in:extends:Willighagen_2020].
 
 ### Supported intentions
 
