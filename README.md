@@ -8,7 +8,7 @@ with the CiTO ontology.
 
 To use this template, you need a [pandoc](https://github.com/jgm/pandoc/releases) installation
 (version 2.12 or higher). A `Makefile` is provided to convert
-the `article.md` template into a Word `.docx` (default), `.html`, and a PDF file:
+the `article.Rmd` template into a Word `.docx` (default), `.html`, and a PDF file:
 
 ```shell
 make article.docx
