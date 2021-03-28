@@ -115,19 +115,27 @@ end
 --- `default_cito_property` will be returned, together with the
 --- unchanged input ID.
 local function split_cito_from_id (citation_id)
-  local parts = string.gmatch(citation_id, "[^:]+")
-  local intentions = {}
-  local id_parts= {}
-  for part in parts do
-    if properties_by_alias[part] then
-      table.insert(intentions, properties_by_alias[part])
+  local split_citation_id = {}
+  local cito_props = {}
+  local id_started = false
+
+  for part in citation_id:gmatch('[^:]+') do
+    if not id_started and properties_by_alias[part] then
+      table.insert(cito_props, properties_by_alias[part])
     else
-      table.insert(id_parts, part)
+      id_started = true
+    end
+
+    if id_started then
+      table.insert(split_citation_id, 1, part)
     end
   end
 
-  local citation_id = table.concat(id_parts, ":")
-  return intentions, citation_id
+  if next(split_citation_id) == nill then
+    table.insert(split_citation_id, table.remove(cito_props))
+  end
+
+  return cito_props, table.concat(split_citation_id, ':')
 end
 
 --- CiTO properties by citation.
