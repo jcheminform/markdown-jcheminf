@@ -42,7 +42,8 @@ website.
 ### CiTO support
 
 The template supports CiTO annotation and the template contains
-instructions on how to use them.
+instructions on how to use them. This feature is based on earlier work
+by Krewinkel et al. [1].
 
 ## Submission to JCheminform.
 
@@ -55,4 +56,8 @@ version can be used to submit the manuscript to the journal.
 
 This template would not exist without the work by 
 Albert Krewinkel [@kraut0xA](https://twitter.com/kraut0xA).
+
+## References
+
+1.Krewinkel, A. & Winkler, R. Formatting Open Science: agilely creating multiple document formats for academic manuscripts with Pandoc Scholar. PeerJ Computer Science 3, e112 (2017).
 
