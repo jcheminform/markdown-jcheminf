@@ -3,7 +3,7 @@
 -- This library is free software; you can redistribute it and/or modify it
 -- under the terms of the MIT license. See LICENSE for details.
 
-local _version = '1.0.0'
+local _version = '1.0.1'
 local properties_and_aliases = {
   agreesWith = {
     'agreeWith',
@@ -52,6 +52,8 @@ local properties_and_aliases = {
     'disagrees_with',
     'disagree',
     'disagrees'
+  },
+  discusses = {
   },
   disputes = {
   },
