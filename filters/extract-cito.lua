@@ -48,6 +48,10 @@ local properties_and_aliases = {
     'as_recommended_reading',
     'recommended_reading'
   },
+  citesAsRelated = {
+  },
+  citesForInformation = {
+  },
   disagreesWith = {
     'disagrees_with',
     'disagree',
